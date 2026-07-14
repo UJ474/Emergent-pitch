@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergent x AdOnMo Network Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+>
+<link rel="stylesheet" href="tooplate-neon-carbon-style.css">
+</head>
+<body>
+  <aside class="sidebar" aria-label="Page Navigation">
+    <a class="sidebar-brand" href="#top" aria-label="Go to top">
+      <span>E</span>
+    </a>
+    <nav class="sidebar-nav">
+      <a href="#hero" class="sidebar-link active">Intro</a>
+      <a href="#opportunity" class="sidebar-link">Reach</a>
+      <a href="#cities" class="sidebar-link">Cities</a>
+      <a href="#network" class="sidebar-link">Network</a>
+      <a href="#next-steps" class="sidebar-link">Next</a>
+    </nav>
+    <div class="sidebar-meta">
+      <div class="sidebar-meta-label">Pitch Mode</div>
+      <div class="sidebar-meta-value">Live Layout</div>
+    </div>
+  </aside>
+
+  <button class="hamburger" type="button" aria-label="Toggle Navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <a href="#hero">Intro</a>
+    <a href="#opportunity">Reach</a>
+    <a href="#cities">Cities</a>
+    <a href="#network">Network</a>
+    <a href="#next-steps">Next</a>
+  </nav>
+
+  <main class="main-stage" id="mainStage">
+    <header class="hud-header" id="top">
+      <div>
+        <div class="hud-eyebrow">Emergent activation concept</div>
+        <div class="hud-title">How Emergent Can Use AdOnMo City Screens</div>
+      </div>
+      <div class="hud-stats">
+        <div class="hud-stat">
+          <span class="hud-stat-label">Cities</span>
+          <span class="hud-stat-value" data-global-cities>06</span>
+        </div>
+        <div class="hud-stat">
+          <span class="hud-stat-label">Curated Sites</span>
+          <span class="hud-stat-value" data-global-sites>48</span>
+        </div>
+        <div class="hud-stat">
+          <span class="hud-stat-label">Format Mix</span>
+          <span class="hud-stat-value">Residential + Office + Retail</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-copy reveal">
+        <p class="hero-kicker">Pitch layout draft</p>
+        <h1>Emergent can own high-intent moments across India city clusters.</h1>
+        <p class="hero-text">
+          This page turns your inventory sheet into a city-by-city pitch surface. Each city opens into a smooth map view with coordinates, localities, and only the metrics that matter for a media buy conversation.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" type="button" data-open-city="Hyderabad">Open Hyderabad Map</button>
+          <a class="btn-secondary" href="#cities">Browse Cities</a>
+        </div>
+      </div>
+
+      <div class="hero-panel tech-bracket reveal">
+        <div class="hero-panel-label">What this layout shows</div>
+        <div class="hero-panel-grid">
+          <article>
+            <span>01</span>
+            <h3>City-led story</h3>
+            <p>Separate sections for each city so the pitch feels territorial, not generic.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Map-led proof</h3>
+            <p>Click a city and show exact coverage through latitude-longitude markers.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Decision metrics</h3>
+            <p>Impressions, screens, budget, and audience only. The rest can stay hidden.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="opportunity reveal" id="opportunity">
+      <div class="section-heading">
+        <p class="section-kicker">Network snapshot</p>
+        <h2>Use the sheet as a location-backed media planning engine.</h2>
+      </div>
+      <div class="metric-grid" id="metricGrid"></div>
+    </section>
+
+    <section class="city-rail-section reveal" id="cities">
+      <div class="section-heading">
+        <p class="section-kicker">City selection</p>
+        <h2>Start with the strongest launch markets, then drill into locality-level coverage.</h2>
+      </div>
+      <div class="city-rail" id="cityRail"></div>
+    </section>
+
+    <section class="network-section reveal" id="network">
+      <div class="section-heading">
+        <p class="section-kicker">City sheets</p>
+        <h2>Every city block can hold narrative copy now and deeper brand logic later.</h2>
+      </div>
+      <div class="city-sections" id="citySections"></div>
+    </section>
+
+    <section class="next-steps reveal" id="next-steps">
+      <div class="section-heading">
+        <p class="section-kicker">Next layer</p>
+        <h2>What to plug in next when you want to sharpen the pitch.</h2>
+      </div>
+      <div class="next-grid">
+        <article class="next-card tech-bracket">
+          <h3>Brand story</h3>
+          <p>Add Emergent product story, campaign objective, and ideal audience segments.</p>
+        </article>
+        <article class="next-card tech-bracket">
+          <h3>Media logic</h3>
+          <p>Choose which inventory types matter most: residential, coworking, corporate, malls, fitness, or office coffee.</p>
+        </article>
+        <article class="next-card tech-bracket">
+          <h3>Commercial layer</h3>
+          <p>Add budget ranges, city prioritization, and rollout phases once the layout is approved.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <aside class="map-drawer" id="mapDrawer" aria-hidden="true">
+    <div class="map-backdrop" data-close-drawer></div>
+    <div class="map-panel tech-bracket">
+      <div class="map-panel-header">
+        <div>
+          <p class="map-panel-kicker">Interactive city view</p>
+          <h3 id="mapTitle">City coverage</h3>
+        </div>
+        <button class="map-close" type="button" aria-label="Close map" data-close-drawer>&times;</button>
+      </div>
+      <div class="map-panel-meta" id="mapMeta"></div>
+      <div class="map-layout">
+        <div class="map-canvas" id="cityMap"></div>
+        <div class="map-site-list" id="mapSiteList"></div>
+      </div>
+    </div>
+  </aside>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="tooplate-neon-carbon-script.js"></script>
+</body>
+</html>
