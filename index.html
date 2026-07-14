@@ -730,45 +730,60 @@
   gap: 16px;
   width: 100%;
   max-width: 500px;
-  padding: 18px 20px;
-  border: 1.5px solid var(--border);
-  border-radius: 12px;
-  background: var(--white);
+  padding: 20px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #121212, #0a0a0a);
   cursor: pointer;
-  transition: border-color .2s, box-shadow .2s, transform .15s;
-  color: var(--ink);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+.hero-audience-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(18, 109, 251, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 .hero-audience-card:hover {
-  border-color: var(--ink);
-  box-shadow: 0 4px 20px rgba(0,0,0,.07);
-  transform: translateY(-2px);
+  border-color: #126dfb;
+  box-shadow: 0 8px 32px rgba(18, 109, 251, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+.hero-audience-card:hover::before {
+  left: 200%;
 }
 .hac-icon {
-  font-size: 26px;
+  font-size: 32px;
   flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(18, 109, 251, 0.6));
 }
 .hero-audience-card strong {
   display: block;
   font-family: var(--font-hero);
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #fff;
+  letter-spacing: 0.02em;
 }
 .hac-sub {
   display: block;
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.4;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
 }
 .hac-arrow {
   margin-left: auto;
-  font-size: 18px;
-  color: var(--muted);
-  transition: transform .2s, color .2s;
+  font-size: 20px;
+  color: #126dfb;
+  transition: transform .3s ease;
 }
 .hero-audience-card:hover .hac-arrow {
-  transform: translateX(4px);
-  color: var(--ink);
+  transform: translateX(6px) scale(1.1);
 }
 
     /* ─── B2B TOP SECTION ────────────────────────────────────── */
@@ -856,11 +871,11 @@
         <div class="hero-stat-label">Cities Covered</div>
       </div>
       <div>
-        <div class="hero-stat-value">—</div>
-        <div class="hero-stat-label">Total Screens (add data)</div>
+        <div class="hero-stat-value">46,415</div>
+        <div class="hero-stat-label">Total Screens</div>
       </div>
       <div>
-        <div class="hero-stat-value">—</div>
+        <div class="hero-stat-value">1.01B+</div>
         <div class="hero-stat-label">Monthly Impressions</div>
       </div>
       <div>
@@ -932,19 +947,19 @@
             <!-- Summary chips — fill with real data -->
             <div class="data-chips">
               <div class="data-chip">
-                <span class="chip-value">—</span>
+                <span class="chip-value">78</span>
                 <span class="chip-label">Locations</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
+                <span class="chip-value">11.4L</span>
                 <span class="chip-label">Employees</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
-                <span class="chip-label">Daily Footfall</span>
+                <span class="chip-value">344</span>
+                <span class="chip-label">Screens</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
+                <span class="chip-value">24.7L</span>
                 <span class="chip-label">Impressions/mo</span>
               </div>
             </div>
@@ -1049,19 +1064,19 @@
           <div>
             <div class="data-chips">
               <div class="data-chip">
-                <span class="chip-value">—</span>
+                <span class="chip-value">411</span>
                 <span class="chip-label">Locations</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
+                <span class="chip-value">10.6L</span>
                 <span class="chip-label">Members</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
-                <span class="chip-label">Daily Footfall</span>
+                <span class="chip-value">1,739</span>
+                <span class="chip-label">Screens</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
+                <span class="chip-value">2.19Cr</span>
                 <span class="chip-label">Impressions/mo</span>
               </div>
             </div>
@@ -1144,19 +1159,19 @@
           <div>
             <div class="data-chips">
               <div class="data-chip">
-                <span class="chip-value">—</span>
+                <span class="chip-value">2,000</span>
                 <span class="chip-label">Outlets</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
-                <span class="chip-label">Daily Cups</span>
+                <span class="chip-value">15.3L</span>
+                <span class="chip-label">Employees</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
-                <span class="chip-label">Daily Footfall</span>
+                <span class="chip-value">2,000</span>
+                <span class="chip-label">Screens</span>
               </div>
               <div class="data-chip">
-                <span class="chip-value">—</span>
+                <span class="chip-value">8.64Cr</span>
                 <span class="chip-label">Impressions/mo</span>
               </div>
             </div>
@@ -1273,10 +1288,10 @@
           </div>
           <div>
             <div class="data-chips">
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Complexes</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Households</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Footfall/day</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Impressions/mo</span></div>
+              <div class="data-chip"><span class="chip-value">5,975</span><span class="chip-label">Complexes</span></div>
+              <div class="data-chip"><span class="chip-value">16.4L</span><span class="chip-label">Households</span></div>
+              <div class="data-chip"><span class="chip-value">41,509</span><span class="chip-label">Screens</span></div>
+              <div class="data-chip"><span class="chip-value">89.6Cr</span><span class="chip-label">Impressions/mo</span></div>
             </div>
           </div>
         </div>
@@ -1344,10 +1359,10 @@
           </div>
           <div>
             <div class="data-chips">
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Malls</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Weekly Footfall</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Dwell Time</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Impressions/mo</span></div>
+              <div class="data-chip"><span class="chip-value">23</span><span class="chip-label">Malls</span></div>
+              <div class="data-chip"><span class="chip-value">1.78Cr</span><span class="chip-label">Footfall/mo</span></div>
+              <div class="data-chip"><span class="chip-value">260</span><span class="chip-label">Screens</span></div>
+              <div class="data-chip"><span class="chip-value">18.7L</span><span class="chip-label">Impressions/mo</span></div>
             </div>
           </div>
         </div>
@@ -1406,10 +1421,10 @@
           </div>
           <div>
             <div class="data-chips">
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Stations</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Daily Ridership</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Avg Dwell</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Impressions/mo</span></div>
+              <div class="data-chip"><span class="chip-value">24</span><span class="chip-label">Stations</span></div>
+              <div class="data-chip"><span class="chip-value">86.3L</span><span class="chip-label">Footfall/mo</span></div>
+              <div class="data-chip"><span class="chip-value">237</span><span class="chip-label">Screens</span></div>
+              <div class="data-chip"><span class="chip-value">24.1L</span><span class="chip-label">Impressions/mo</span></div>
             </div>
           </div>
         </div>
@@ -1468,10 +1483,10 @@
           </div>
           <div>
             <div class="data-chips">
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Gyms</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Members</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Avg Dwell</span></div>
-              <div class="data-chip"><span class="chip-value">—</span><span class="chip-label">Impressions/mo</span></div>
+              <div class="data-chip"><span class="chip-value">320</span><span class="chip-label">Gyms</span></div>
+              <div class="data-chip"><span class="chip-value">8.22L</span><span class="chip-label">Footfall/mo</span></div>
+              <div class="data-chip"><span class="chip-value">326</span><span class="chip-label">Screens</span></div>
+              <div class="data-chip"><span class="chip-value">20.5L</span><span class="chip-label">Impressions/mo</span></div>
             </div>
           </div>
         </div>
